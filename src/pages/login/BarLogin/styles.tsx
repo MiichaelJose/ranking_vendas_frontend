@@ -26,7 +26,7 @@ const Container = styled.main`
   }
 
   > div {
-    height: 50%;
+    height: 55%;
     width: 85%;
     display: flex;
     flex-direction: column;
@@ -48,12 +48,12 @@ const Container = styled.main`
 
     > label {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     > input {
       width: 100%;
-      height: 35px;
+      height: 40px;
       border-radius: 5px;
       margin-top: 5px;
       padding-left: 10px;
