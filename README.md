@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+ # Estrutura do Projeto
+Este projeto utiliza uma estrutura modular para organizar o código de maneira limpa e eficiente. Abaixo está a explicação de cada pasta no projeto:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## src/
+- Pasta principal onde reside todo o código-fonte da aplicação.
 
-Currently, two official plugins are available:
+## 1. components/
+- Componentes reutilizáveis que podem ser usados em várias partes da aplicação. Esses componentes são genéricos e não dependem de uma página ou funcionalidade específica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Exemplo: Button.js, Modal.js, Card.js
+## 2. hooks/
+- Custom Hooks que encapsulam a lógica reutilizável. São funções que permitem a reutilização de estado e efeitos colaterais em vários componentes.
 
-## Expanding the ESLint configuration
+- Exemplo: useFetch.js, useAuth.js, useForm.js
+## 3. pages/
+- Páginas que representam as views principais da aplicação. Cada arquivo nesta pasta corresponde a uma página acessada via rota.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Exemplo: HomePage.js, LoginPage.js, DashboardPage.js
+## 4. routes/
+- Arquivo(s) de configuração de rotas da aplicação. Define quais componentes são renderizados para cada caminho da URL.
 
-- Configure the top-level `parserOptions` property like this:
+- Exemplo: AppRoutes.js
+## 5. services/
+- Contém serviços que lidam com requisições HTTP e interação com APIs externas. Pode incluir lógica de autenticação, busca de dados ou outros serviços.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Exemplo: apiService.js, authService.js
+## 6. features/
+- Agrupa funcionalidades ou módulos específicos do projeto. Cada pasta dentro de features pode conter páginas, componentes, hooks, etc., relacionados àquela funcionalidade.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Exemplo: auth/, userProfile/, shoppingCart/
+## 7. styles/
+- Contém arquivos de estilo globais, como CSS, SASS ou arquivos de variáveis de temas, e arquivos que definem o layout da aplicação.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Exemplo: global.css, theme.scss
+## 8. assets/
+- Armazena recursos estáticos da aplicação, como imagens, ícones, fontes, e arquivos de mídia.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Exemplo: logo.png, background.jpg
+## 9. contexts/
+- Define contextos globais usando React Context API. É utilizado para compartilhar dados ou estados entre componentes de diferentes partes da aplicação.
+
+- Exemplo: AuthContext.js, ThemeContext.js
+## 10. utils/
+- Funções utilitárias ou helpers que podem ser utilizadas em diversas partes da aplicação para evitar repetição de código.
+
+- Exemplo: formatDate.js, debounce.js
