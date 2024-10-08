@@ -26,8 +26,9 @@ const Container = styled.main`
   }
 
   > div {
-    height: 55%;
+    height: 100%;
     width: 85%;
+    max-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +63,7 @@ const Container = styled.main`
     > p {
       text-align: right;
       font-size: 0.8em;
-      margin-top: 7px;
+      margin-top: 5px;
     }
   }
 
