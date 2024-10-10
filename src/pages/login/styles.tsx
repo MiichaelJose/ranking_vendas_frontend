@@ -1,12 +1,21 @@
 import styled from 'styled-components'
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #b38f8f;
+const Container = styled.main`
+  display: flex;
+  width: 100%;
 `;
 
-const Container = styled.main`
+const SectionImage = styled.div`
+  background-color: black;
+  background-image: url("https://app.rankingdevendas.com.br/static/media/login-1.23d5039864bf74200eed.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  flex: 1 1;
+  transition: 1s;
+`;
+
+const SectionLogin = styled.main`
   height: 100vh;
   width: 400px;
   background-color:rgb(29, 28, 65);
@@ -25,7 +34,7 @@ const Container = styled.main`
     text-decoration: underline;
   }
 
-  > div {
+  > section {
     height: 100%;
     width: 85%;
     max-height: 350px;
@@ -34,7 +43,7 @@ const Container = styled.main`
     justify-content: space-between;
   }
 
-  .section-btn-register {
+  > section > div {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-bottom: 15px;
     
@@ -43,7 +52,7 @@ const Container = styled.main`
     }
   }
 
-  .form {
+  form {
     display: flex;
     flex-direction: column;
 
@@ -72,7 +81,8 @@ const Container = styled.main`
     border-radius: 5px;
     background-color: rgb(255, 209, 0);
     color: white;
+    margin-top: 1.3rem;
   }
 `;
 
-export { Title, Container}
+export { Container, SectionLogin, SectionImage}
