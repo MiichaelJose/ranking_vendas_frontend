@@ -1,5 +1,4 @@
 import { Container, Profile, LinkPage, Desktop, Mobile } from "./styles";
-import seta from "../../assets/seta.png"
 
 import Form from 'react-bootstrap/Form';
 

@@ -19,6 +19,9 @@ export const login = async (credentials: { email: string; password: string }): P
     // }
     // return response.json();
 
+    console.log(credentials);
+  
+
     return {
         token: "qwedasasdsd",
         user: {
