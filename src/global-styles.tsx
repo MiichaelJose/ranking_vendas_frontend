@@ -7,16 +7,27 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    h1, h2, h3, h4, p, a {
+    /* body {
+        background-color: #38254f;
+    } */
+
+    h1, h2, h3, h4, h5, p, a {
         font-family: "Roboto", sans-serif;
         font-style: normal;
     }
 
     p, a, label {
+        margin: 0;
+        padding: 0;
         font-family: "Roboto", sans-serif;
     }
 
-    p, label {
-        font-size: 0.9rem;
+    p, label, td, th {
+        font-size: 0.8rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
 `;
