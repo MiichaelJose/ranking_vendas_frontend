@@ -1,7 +1,6 @@
-import { Container, Profile, LinkPage, Desktop, Mobile, CustomSelect } from "./styles";
-
-import engrenagem from "../../assets/engrenagem-white.png"
 import { useNavigate } from "react-router-dom";
+import { Container, Profile, LinkPage, Desktop, Mobile, CustomSelect } from "./styles";
+import engrenagem from "../../assets/engrenagem-white.png"
 
 export default function Header() {
     const navigate = useNavigate()
