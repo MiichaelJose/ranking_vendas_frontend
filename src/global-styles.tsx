@@ -7,9 +7,9 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    /* body {
-        background-color: #38254f;
-    } */
+    body {
+        background-color: rgb(19, 18, 46);
+    } 
 
     h1, h2, h3, h4, h5, p, a {
         font-family: "Roboto", sans-serif;
@@ -30,4 +30,5 @@ export default createGlobalStyle`
         text-decoration: none;
         color: black;
     }
+
 `;

@@ -8,7 +8,7 @@ const AppRoutes = createBrowserRouter([
         element: <Login/>,
     },
     {
-        path: "/home",
+        path: "/conversao-venda",
         element: <Home/>,
     },
 ])

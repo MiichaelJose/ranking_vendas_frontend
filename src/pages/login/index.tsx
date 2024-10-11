@@ -12,7 +12,7 @@ export default function Login() {
         const data = await login({ email, password });
         
         if(data instanceof Object) {
-            navigate("/home");
+            navigate("/conversao-venda");
         }
     }
 

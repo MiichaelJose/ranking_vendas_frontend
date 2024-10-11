@@ -9,18 +9,22 @@ const Container = styled.main`
     padding-inline: 1rem; 
     overflow-x: auto; /* Ativa o scroll horizontal automaticamente */
     white-space: nowrap; /* Impede quebra de linha e mantém o conteúdo na mesma linha */
-    background-color: #F2F2F2;
+    background-color: rgb(29, 28, 65);
     display: flex; /* Alinha os itens horizontalmente */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     justify-content: space-between;
-
+    color: white;
+    
     > a {
         cursor: pointer;
         font-size: 0.8rem;
-        padding-right: 10px;
+        padding: 10px;
         border-right: 1px solid black;
     }
 
+    > a:hover {
+        background-color: rgb(41, 40, 81);;
+    }
         /* Estilizando o scrollbar para WebKit */
     ::-webkit-scrollbar {
         height: 2px;
