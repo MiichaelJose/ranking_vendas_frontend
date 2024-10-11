@@ -25,8 +25,8 @@ export default function Header() {
             </Mobile>
             <Desktop>
                 <LinkPage>
-                    <p onClick={(e) => navigate("/ranking-venda")}>ranking de vendas</p>
-                    <p onClick={(e) => navigate("/conversao-venda")}>conversao de vendas</p>
+                    <p onClick={() => navigate("/ranking-venda")}>ranking de vendas</p>
+                    <p onClick={() => navigate("/conversao-venda")}>conversao de vendas</p>
                 </LinkPage>
 
                 <Profile>
