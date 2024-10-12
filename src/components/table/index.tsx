@@ -1,7 +1,6 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -9,6 +8,7 @@ import {
   } from "@/components/ui/table"
 
 export default function TableData({ orders }: any) {
+    console.log(orders);
     
     return(
         <main className="flex w-full h-96 mt-10 rounded-sm bg-secundaryground overflow-hidden scrollbar">
