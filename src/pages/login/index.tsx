@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container, SectionLogin, SectionImage } from './styles';
 import { useNavigate } from 'react-router-dom';
 import login from '../../services/Auth';
 
@@ -17,27 +16,27 @@ export default function Login() {
     }
 
     return (
-        <Container>  
-            <SectionImage/>
-            <SectionLogin>
-                <section>
-                    <div>
-                        <h1>Bem-vindo</h1>
-                        <p >Ainda não tem uma conta ? <span>Cadastre-se agora</span></p>
+        <div className='flex w-full'>  
+            <div className="bg-black bg-[url('https://app.rankingdevendas.com.br/static/media/login-1.23d5039864bf74200eed.jpg')] bg-cover bg-no-repeat bg-[inherit] flex-1 transition duration-1000"></div>
+            <div className="h-screen w-[400px] bg-[rgb(29,28,65)] text-white flex justify-center items-center flex-col">
+                <section className="h-full w-[85%] max-h-[350px] flex flex-col justify-between">
+                    <div className='border-b border-white/15 pb-4 pb-14"'>
+                        <h1 className='text-2xl'>Bem-vindo</h1>
+                        <p className='mt-5 text-gray-400'>Ainda não tem uma conta ? <span className='text-white underline'>Cadastre-se agora</span></p>
                     </div>
-                    <form>
-                        <label htmlFor="e-mai">E-mail</label>
-                        <input type="text" name="e-mail" id="e-mail" placeholder='ex: mai@domain.oom' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <form className='flex flex-col'>
+                        <label htmlFor="e-mai" className="inline-block mt-5">E-mail</label>
+                        <input className="w-full h-10 rounded-md mt-1 pl-2  "type="text" name="e-mail" id="e-mail" placeholder='ex: mai@domain.oom' value={email} onChange={(e) => setEmail(e.target.value)}/>
 
-                        <label htmlFor="password">Senha</label>
-                        <input type="password" name="password" id="password" placeholder='*****' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <label htmlFor="password" className="inline-block mt-5">Senha</label>
+                        <input className='w-full h-10 rounded-md mt-1 pl-2' type="password" name="password" id="password" placeholder='*****' value={password} onChange={(e) => setPassword(e.target.value)}/>
 
-                        <p>Esqueceu a sua senha? <span>Clique aqui</span></p>
+                        <p className='text-right text-sm mt-1.5 text-gray-400'>Esqueceu a sua senha? <span className='text-white underline'>Clique aqui</span></p>
 
-                        <button type='button' onClick={handleSubmit}>Entrar Agora</button>
+                        <button className="h-10 rounded-md bg-yellow-400 text-white mt-5" type='button' onClick={handleSubmit}>Entrar Agora</button>
                     </form>
                 </section>
-            </SectionLogin>
-        </Container>
+            </div>
+        </div>
     )
 }
