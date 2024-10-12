@@ -1,7 +1,7 @@
 import ContainerPage from "../../components/container-page";
 import Header from "../../components/header";
-import Table from "../../components/table";
 import NavSalesConversation from "../../components/nav-sales-conversation";
+import TableData from "../../components/table";
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <ContainerPage>
             <Header/>
             <NavSalesConversation />
-            <Table orders={{data:"oi"}}/>
+            <TableData orders={{data:"oi"}}/>
         </ContainerPage>
     )
 }

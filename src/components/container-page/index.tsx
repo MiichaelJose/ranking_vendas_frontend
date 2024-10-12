@@ -1,5 +1,3 @@
-import { Container } from './styles'
-
 export default function ContainerPage({ children }: any) {
-    return <Container>{children}</Container>
+    return <main className="max-w-4xl mx-auto">{children}</main>
 }

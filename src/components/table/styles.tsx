@@ -1,4 +1,3 @@
-import Table from "react-bootstrap/esm/Table";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -26,24 +25,4 @@ const Container = styled.div`
     scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 `;
 
-const Tables = styled(Table)`
-    width: 900px;
-    color: white;
-
-    th {
-        color: white;
-        border: none;
-        background-color: rgba(49, 48, 86, 0);
-    }
-
-    tr {
-        background-color: rgba(49, 48, 86, 0);
-    }
-
-    td {
-        color: white;
-        background-color: rgba(49, 48, 86, 0);
-    }
-`
-
-export { Container, Tables }
+export { Container }

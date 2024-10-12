@@ -10,11 +10,12 @@ export default tseslint
     { ignores: ["dist"] },
     {
       extends: [js.configs.recommended, ...tseslint.configs.recommended, "google"],
-      files: ["**/*.{ts,tsx}"],
+      files: ["**/*.{js,ts,tsx}"],
       languageOptions: {
         ecmaVersion: 2020,
         globals: globals.browser,
       },
+      ignorePatterns: ["node_modules", "dist"],
       plugins: {
         "react-hooks": reactHooks,
         "react-refresh": reactRefresh,

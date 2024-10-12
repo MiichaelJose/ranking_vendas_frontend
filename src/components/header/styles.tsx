@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Form from "react-bootstrap/Form";
 
 const Container = styled.main`
     width: 100%;
@@ -61,7 +60,6 @@ const Desktop = styled.div`
 `;
 
 const LinkPage = styled.nav`
-
     width: 275px;
     display: flex;
     justify-content: space-between;
@@ -117,14 +115,14 @@ const Profile = styled.section`
     }
 `;
 
-const CustomSelect = styled(Form.Select)`
-    border-color: gray;
-    background-color: rgba(49, 48, 86, 0);
-    color: white;
+// const CustomSelect = styled(Form.Select)`
+//     border-color: gray;
+//     background-color: rgba(49, 48, 86, 0);
+//     color: white;
 
-    &:focus {
-        box-shadow: none; /* Remove o efeito de sombra */
-    }
-`;
+//     &:focus {
+//         box-shadow: none; /* Remove o efeito de sombra */
+//     }
+// `;
 
-export { Container, Desktop, Mobile, Profile, LinkPage, CustomSelect }
+export { Container, Desktop, Mobile, Profile, LinkPage }

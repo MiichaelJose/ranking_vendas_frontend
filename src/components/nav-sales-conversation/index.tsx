@@ -1,16 +1,13 @@
-import { Container } from "./styles";
-
-
 export default function NavSplesConversption() {
     return (
-        <Container>
-            <a >aguardando contato</a>
+        <main className="flex w-full h-10 mt-5 justify-between gap-5 whitespace-nowrap bg-secundaryground overflow-x-scroll text-white rounded-sm px-2 scrollbar flex-row items-center">
+            <a>aguardando contato</a>
+            <a >em contato</a>
+            <a >acompanhamento</a>
+            <a >convertidos</a>
             <a >boleto vencido 12</a>
             <a >boleto vencido 6</a>
-            <a >acompanhamento</a>
-            <a >em contato</a>
-            <a >convertidos</a>
             <a >configuracoes</a>
-        </Container>
+        </main>
     )
 }

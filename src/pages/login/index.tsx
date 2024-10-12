@@ -23,7 +23,7 @@ export default function Login() {
                 <section>
                     <div>
                         <h1>Bem-vindo</h1>
-                        <p>Ainda não tem uma conta ? <span>Cadastre-se agora</span></p>
+                        <p >Ainda não tem uma conta ? <span>Cadastre-se agora</span></p>
                     </div>
                     <form>
                         <label htmlFor="e-mai">E-mail</label>
