@@ -14,6 +14,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        
         secundaryground: "var(--background-secundary)",
         primaryground: "hsl(var(--background-primary))",
         background: "hsl(var(--background))",
