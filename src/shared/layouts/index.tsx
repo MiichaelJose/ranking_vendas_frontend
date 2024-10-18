@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./header";
-import SideBar from "./SideBar";
+
+import Header from "../components/header";
+import SideBar from "../components/sidebar";
 
 export default function Layout() {
   const [darkMode, setDarkMode] = useState<boolean>(() => {

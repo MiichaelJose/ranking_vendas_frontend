@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 type TogglesSideBar = {
@@ -9,6 +10,8 @@ type TogglesSideBar = {
 };
 
 export default function SideBar(data: TogglesSideBar) {
+  const [sideMenuName, setSideMenuName] = useState("");
+
   return (
     <>
       <aside className="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
@@ -66,8 +69,11 @@ export default function SideBar(data: TogglesSideBar) {
 
             <li className="relative px-6 py-3">
               <button
-                className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 dark:hover:text-gray-200"
-                onClick={data.togglePagesMenu}
+                className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors focus:ring-2 focus:ring-gray-500 focus:shadow-outline-purple rounded-sm p-1 duration-150 dark:hover:text-gray-200"
+                onClick={() => {
+                  data.togglePagesMenu();
+                  setSideMenuName("menu-conversion");
+                }}
               >
                 <span className="inline-flex items-center">
                   <svg
@@ -91,7 +97,7 @@ export default function SideBar(data: TogglesSideBar) {
                   />
                 </svg>
               </button>
-              {data.pagesMenuOpen && (
+              {data.pagesMenuOpen && sideMenuName == "menu-conversion" && (
                 <ul
                   className="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
                   aria-label="submenu"
@@ -105,8 +111,11 @@ export default function SideBar(data: TogglesSideBar) {
 
             <li className="relative px-6 py-3">
               <button
-                className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 dark:hover:text-gray-200"
-                onClick={data.togglePagesMenu}
+                className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 focus:ring-2 focus:ring-gray-500 focus:shadow-outline-purple rounded-sm p-1 dark:hover:text-gray-200"
+                onClick={() => {
+                  data.togglePagesMenu();
+                  setSideMenuName("menu-ranking");
+                }}
               >
                 <span className="inline-flex items-center">
                   <svg
@@ -120,7 +129,7 @@ export default function SideBar(data: TogglesSideBar) {
                   >
                     <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                   </svg>
-                  <span className="ml-4">Ranking  </span>
+                  <span className="ml-4">Ranking </span>
                 </span>
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                   <path
@@ -130,7 +139,7 @@ export default function SideBar(data: TogglesSideBar) {
                   />
                 </svg>
               </button>
-              {data.pagesMenuOpen && (
+              {data.pagesMenuOpen && sideMenuName == "menu-ranking" && (
                 <ul
                   className="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
                   aria-label="submenu"
