@@ -1,80 +1,44 @@
+"use client"
+import { useState } from "react";
+
 export default function SalesConversation() {
+  const [position, setPosition] = useState("bottom")
+  const [configMenu, setConfigMenu] = useState(false);
+
   return (
     <div className="container grid px-6 mx-auto">
       <h2 className="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
         Conversão de vendas
       </h2>
-      {/* <!-- CTA --> */}
-      <a
-        className="grid grid-cols-6 gap-6 p-4 mb-8 text-sm font-semibold overflow-x-scroll align-middle flex-row text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple "
-      
-      >
-        {/* Seção 1 */}
-        <div className="flex items-center">
-          <a href="javascript: void(0);" className="text-white">
-            Aguardando Contato
-          </a>
-        </div>
 
-        {/* Seção 2 */}
-        <div className="flex items-center">
-          <a href="javascript: void(0);" className="text-white">
-            Boleto Vencendo
-            <span className="ml-2 bg-red-600 rounded-full px-2 py-1">12</span>
-          </a>
-        </div>
-
-        {/* Seção 3 */}
-        <div className="flex items-center">
-          <a href="javascript: void(0);" className="text-white">
-            Boleto Vencido
-            <span className="ml-2 bg-red-600 rounded-full px-2 py-1">6</span>
-          </a>
-        </div>
-
-        {/* Seção 4 */}
-        <div className="flex items-center">
-          <a href="javascript: void(0);" className="text-white">
-            Acompanhamento
-            <span className="ml-2 bg-red-600 rounded-full px-2 py-1">7</span>
-          </a>
-        </div>
-
-        <div className="flex items-center">
-          <a href="javascript: void(0);" className="text-white">
-            Em contato
-          </a>
-        </div>
-
-        {/* Seção 6: Dropdown */}
-        <div className="relative inline-block text-left ">
-          <button className="text-white" type="button" aria-haspopup="true" aria-expanded="false">
-            Configurações
-          </button>
-          <div className="absolute right-0 mt-2 w-56 bg-white text-black divide-y divide-gray-100 rounded-md shadow-lg dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700">
-            <a
-              href="/bseller_account_google"
-              className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <i className="fab fa-google"></i> Agenda do Google
+      <a className=" w-full flex align-middle items-center  p-4 mb-8 text-sm font-semibold overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple ">
+        <div className="min-w-[1000px] grid grid-cols-5 gap-5 items-center mx-auto">
+          <div className="flex h-full items-center justify-center hover:bg-gray-700/50">
+            <a href="javascript: void(0);" className="text-white">
+              Aguardando Contato
             </a>
-            <a
-              href="/bseller_contact_flow"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <i className="fa fa-project-diagram"></i> Fluxo de Distribuição de Pedidos
+          </div>
+          <div className="flex items-center justify-center">
+            <a href="javascript: void(0);" className="text-white">
+              Boleto Vencendo
+              <span className="ml-2 bg-red-600 rounded-full px-2 py-1">12</span>
             </a>
-            <a href="/bseller_email" className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-800">
-              <i className="fa fa-envelope"></i> Email
+          </div>
+          <div className="flex items-center justify-center">
+            <a href="javascript: void(0);" className="text-white">
+              Boleto Vencido
+              <span className="ml-2 bg-red-600 rounded-full px-2 py-1">6</span>
             </a>
-            <a
-              href="/bseller_flow_messages"
-              className="block px-4 py-2  hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <i className="fab fa-whatsapp"></i> Campanhas
+          </div>
+          <div className="flex items-center justify-center">
+            <a href="javascript: void(0);" className="text-white">
+              Acompanhamento
+              <span className="ml-2 bg-red-600 rounded-full px-2 py-1">7</span>
             </a>
-            <a href="/bseller_reports" className="block px-4 py-2 hover:bg-gray-100">
-              <i className="fa fa-chart-line"></i> Relatórios
+          </div>
+          <div className="flex items-center justify-center">
+            <a href="javascript: void(0);" className="text-white">
+              Em contato
             </a>
           </div>
         </div>
@@ -83,7 +47,7 @@ export default function SalesConversation() {
       {/* <!-- With avatar --> */}
       <h4 className="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">Pedidos</h4>
       <div className="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
           <table className="w-full whitespace-no-wrap">
             <thead>
               <tr className="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
