@@ -4,7 +4,8 @@
 @layer base {
   :root {
     --background-secundary: rgb(29, 28, 65);
-    --background-primary: rgb(19, 18, 46);
+    --blueground: rgb(81,98,250);
+    --bluesecundary: rgb(27,81,244);
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -61,12 +62,11 @@
   * {
     @apply border-border m-0;
   }
-
   body {
     @apply text-foreground;
     background-color: var(--background-primary);
   }
-
+  
   a {
     @apply cursor-pointer;
     text-decoration: none;
@@ -100,11 +100,6 @@
   
   .scrollbar::-webkit-scrollbar-track {
     background: transparent !important; /* Torna o track transparente */
-  }
-  
-  .scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px !important; /* Bordas arredondadas do thumb */
   }
 }
 
