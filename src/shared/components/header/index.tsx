@@ -1,12 +1,4 @@
-type TogglesHeader = {
-  darkMode: boolean;
-  notificationsMenuOpen: boolean;
-  profileMenuOpen: boolean;
-  toggleSideMenu: any;
-  toggleTheme: any;
-  toggleNotificationsMenu: any;
-  toggleProfileMenu: any;
-};
+import { TogglesHeader } from "@/shared/types/HeaderTypes";
 
 export default function Header(data: TogglesHeader) {
   return (

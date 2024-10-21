@@ -2,14 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "@public/assets/logo.png";
-
-type TogglesSideBar = {
-  darkMode: boolean;
-  sideMenuOpen: boolean;
-  pagesMenuOpen: boolean;
-  togglePagesMenu: any;
-  toggleSideMenu: any;
-};
+import { TogglesSideBar } from "@/shared/types/SideBarTypes";
 
 export default function SideBar(data: TogglesSideBar) {
   const [sideMenuName, setSideMenuName] = useState("");

@@ -1,8 +1,8 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 
-import Login from "../pages/login";
-import SalesConversation from "../pages/conversion";
-import Layout from "../shared/layouts";
+import SalesConversation from "@/pages/conversion";
+import Login from "@/pages/login";
+import Layout from "@/shared/layouts";
 
 const AppRoutes = createBrowserRouter(
   createRoutesFromElements([
